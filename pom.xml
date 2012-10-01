@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.data.mongodb.version>1.0.4.RELEASE</spring.data.mongodb.version>
-        <mongo.java.driver.version>2.9.1</mongo.java.driver.version>
+        <mongo.java.driver.version>2.7.2</mongo.java.driver.version>
     </properties>
 
     <dependencies>
