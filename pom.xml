@@ -4,12 +4,16 @@
     <groupId>com.foursquare</groupId>
     <artifactId>fongo</artifactId>
     <version>0.0.1-spring-data-patch</version>
+
     <name>fongo</name>
     <description>Fake in-memory mongo</description>
     <packaging>jar</packaging>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.data.mongodb.version>1.0.4.RELEASE</spring.data.mongodb.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -31,7 +35,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
-            <version>1.0.1.RELEASE</version>
+            <version>${spring.data.mongodb.version}</version>
         </dependency>
     </dependencies>
     <distributionManagement>
