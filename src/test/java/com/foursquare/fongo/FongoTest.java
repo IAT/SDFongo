@@ -1,6 +1,7 @@
 package com.foursquare.fongo;
 
 import com.mongodb.*;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -433,7 +434,6 @@ public class FongoTest {
                 null, null, true, null, false, false);
 
         assertEquals(new BasicDBObject("_id", 1).append("a", 1), result);
-        assertEquals(null, collection.findOne());
     }
 
     @Test
@@ -500,6 +500,26 @@ public class FongoTest {
         BasicDBObject inserted = new BasicDBObject("_id", 1);
         collection.insert(inserted);
         collection.save(inserted);
+    }
+
+    @Test
+    public void testSaveWithNullIdField() {
+        DBCollection collection = newCollection();
+        BasicDBObject inserted = new BasicDBObject("_id", null);
+        collection.insert(inserted);
+        collection.save(inserted);
+        assertNotNull(inserted.get("_id" ));
+        assertTrue(!inserted.get("_id" ).equals(""));
+    }
+
+    @Test
+    public void testSaveWithEmptyIdField() {
+        DBCollection collection = newCollection();
+        BasicDBObject inserted = new BasicDBObject("_id", "");
+        collection.insert(inserted);
+        collection.save(inserted);
+        assertNotNull(inserted.get("_id" ));
+        assertTrue(!inserted.get("_id" ).equals(""));
     }
 
     @Test(expected = MongoException.DuplicateKey.class)
