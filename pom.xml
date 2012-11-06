@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.foursquare</groupId>
     <artifactId>iat-sdfongo</artifactId>
@@ -39,13 +41,7 @@
             <version>${spring.data.mongodb.version}</version>
         </dependency>
     </dependencies>
-    <distributionManagement>
-        <repository>
-            <id>repo.foursquare.com</id>
-            <name>Foursquare Snapshot Repo</name>
-            <url>http://nexus.prod.foursquare.com/nexus/content/repositories/snapshots/</url>
-        </repository>
-    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -70,4 +66,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://54.247.85.254:8080/nexus/content/repositories/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://54.247.85.254:8080/nexus/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
