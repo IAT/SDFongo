@@ -16,6 +16,10 @@
         <spring.data.mongodb.version>1.0.4.RELEASE</spring.data.mongodb.version>
         <mongo.java.driver.version>2.7.2</mongo.java.driver.version>
     </properties>
+    
+	<scm>
+		<connection>scm:git:git@github.com:IAT/SDFongo.git</connection>
+	</scm>
 
     <dependencies>
         <dependency>
