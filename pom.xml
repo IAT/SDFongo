@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.foursquare</groupId>
     <artifactId>iat-sdfongo</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>iat-sdfongo</name>
     <description>Fake in-memory mongo</description>
