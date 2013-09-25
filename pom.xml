@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.foursquare</groupId>
     <artifactId>iat-sdfongo</artifactId>
-    <version>1.15.1-SNAPSHOT</version>
+    <version>1.16.1-SNAPSHOT</version>
 
     <name>iat-sdfongo</name>
     <description>Fake in-memory mongo</description>
@@ -16,11 +17,12 @@
         <spring.data.mongodb.version>1.0.4.RELEASE</spring.data.mongodb.version>
         <mongo.java.driver.version>2.7.2</mongo.java.driver.version>
     </properties>
-    
-	<scm>
-		<connection>scm:git:git@github.com:IAT/SDFongo.git</connection>
-	</scm>
 
+    <scm>
+        <url>https://github.com/IAT/${project.artifactId}</url>
+        <connection>scm:git:ssh://git@github.com:IAT/SDFongo.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:IAT/SDFongo.git</developerConnection>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
